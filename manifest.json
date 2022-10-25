@@ -1,0 +1,31 @@
+{
+  "name": "Image Clipper",
+  "version": "0.0.1",
+  "description": "Exine Lab AI image clipper for Mozila Firefox Bugzila",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [ "desktopCapture", "downloads", "tabs", "scripting", "storage"],
+        
+  "action": {
+    "default_title": "Capture a Screenshot",
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "*://bugzilla.mozilla.org//*"
+  ],
+  "icons": {
+    "16": "/assets/icon-16.png",
+    "32": "/assets/icon-32.png",
+    "48": "/assets/icon-48.png",
+    "128": "/assets/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "match_origin_as_fallback": true,
+      "js": ["content_script.js", "popup.js"]
+    }
+  ]
+}
