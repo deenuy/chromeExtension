@@ -6,15 +6,19 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": [ "desktopCapture", "downloads", "tabs", "scripting", "storage"],
-        
+  "permissions": [
+    "desktopCapture",
+    "downloads",
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+
   "action": {
     "default_title": "Capture a Screenshot",
-    "default_popup": "popup.html"
+    "default_popup": "fetchFormData.html"
   },
-  "host_permissions": [
-    "*://bugzilla.mozilla.org//*"
-  ],
+  "host_permissions": ["*://bugzilla.mozilla.org//*"],
   "icons": {
     "16": "/assets/icon-16.png",
     "32": "/assets/icon-32.png",
@@ -25,7 +29,7 @@
     {
       "matches": ["<all_urls>"],
       "match_origin_as_fallback": true,
-      "js": ["content_script.js", "popup.js"]
+      "js": ["fetchFormData.js", "capture_imgs.js"]
     }
   ]
 }
