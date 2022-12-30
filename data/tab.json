@@ -1,0 +1,21 @@
+{
+  "active" : false,
+  "audible" : false,
+  "autoDiscardable" : true,
+  "discarded" : false,
+  "favIconUrl" : "http://libgen.rs/favicon.ico",
+  "groupId" : -1,
+  "height" : 703,
+  "highlighted" : false,
+  "id" : 173942513,
+  "incognito" : false,
+  "index" : 0,
+  "mutedInfo" : {"muted": false},
+  "pinned" : false,
+  "selected" : false,
+  "status" : "complete",
+  "title" : "Library Genesis",
+  "url" : "http://libgen.rs/search.php?&res=100&req=California&phrase=1&view=simple&column=publisher&sort=def&sortmode=ASC&page=25",
+  "width" : 1440,
+  "windowId" : 173941880
+}

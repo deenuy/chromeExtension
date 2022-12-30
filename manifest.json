@@ -1,6 +1,6 @@
 {
   "name": "Image Clipper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Exine Lab AI image clipper for Mozila Firefox Bugzila",
   "manifest_version": 3,
   "background": {

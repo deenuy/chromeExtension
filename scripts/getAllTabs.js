@@ -1,20 +1,22 @@
+// Get tabs from current browser window
 document.getElementById("getAllTabs").addEventListener("click", () => {
   const tabData = getTabsData();
   const windowData = getBrowserWindowsData();
   console.log(tabData);
   console.log(windowData);
+  // getWindowsInfo();
 });
 
-document.getElementById("getAllWindows").addEventListener("click", () => {
-  // const windowAppData = getAppWindowsData();
-  // console.log(windowAppData);
-  getAppWindowsData();
-});
+/********************************
+     Supplimentary functions  
+ ********************************/
 
+// Chrome API to get tabs objects and return array {title, url}
 const getTabsData = () => {
   let tabsData = [];
   chrome.tabs.query({}, (tabs) => {
-    // console.log(tabs);
+    console.log("Tabs:");
+    console.log(tabs);
     tabs.forEach((tab) => {
       tabsData.push({
         title: tab.title,
@@ -29,7 +31,8 @@ const getTabsData = () => {
 const getBrowserWindowsData = () => {
   let windowsData = [];
   chrome.windows.getAll({ populate: true }, (windows) => {
-    // console.log(windows);
+    console.log("Windows:");
+    console.log(windows);
     windows.forEach((window) => {
       windowsData.push({
         title: window.title,
@@ -40,14 +43,16 @@ const getBrowserWindowsData = () => {
   return windowsData;
 };
 
-const getAppWindowsData = () => {
+// Get selected window screen object using chrome API desktopCapture
+const getWindowsInfo = () => {
   chrome.tabs.query({ active: true }, (tabs) => {
     if (tabs.length) {
       const tab = tabs[0];
       chrome.desktopCapture.chooseDesktopMedia(["window"], tab, (streamId) => {
+        console.log("Selected Window/Screen Information:");
         console.log(streamId, tab);
       });
     }
+    return false;
   });
-  return false;
 };

@@ -78,13 +78,12 @@ chrome.runtime.onMessage.addListener((message, sender, senderResponse) => {
   }
 });
 
-
-document.getElementById("capture_image").addEventListener('click', () => {
+document.getElementById("capture_image").addEventListener("click", () => {
   getCurrentTab().then((tab) => {
     tab = tab[0];
-    // console.log(tab);
+    console.log(tab);
     chrome.desktopCapture.chooseDesktopMedia(
-      ["screen", "window", "tab"],
+      ["window", "tab"],
       tab,
       (streamId) => {
         //check whether the user canceled the request or not

@@ -1,0 +1,49 @@
+{
+  "0" : {
+    "title": "Library Genesis", 
+    "url": "http://libgen.rs/search.php?&res=100&req=Universit…le&column=publisher&sort=def&sortmode=ASC&page=25"},
+  "1" : {
+    "title": "vaderSentiment · PyPI", 
+    "url": "https://pypi.org/project/vaderSentiment/"},
+  "2" : {
+    "title": "Sentiment Labelled Sentences Data Set | Kaggle", 
+    "url": "https://www.kaggle.com/datasets/marklvl/sentiment-labelled-sentences-data-set"},
+  "3" : {"title": "Sentiment Labelled Sentences Data Set | Kaggle", 
+  "url": "https://www.kaggle.com/datasets/marklvl/sentiment-labelled-sentences-data-set"},
+  "4" : {
+    "title": "Download Sentistrength", 
+    "url": "http://sentistrength.wlv.ac.uk/download.php"},
+  "5" : {
+    "title": "Sentiment Labelled Sentences Data Set | Kaggle", 
+    "url": "https://www.kaggle.com/datasets/marklvl/sentiment-labelled-sentences-data-set"},
+  "6" : {
+    "title": "Sentiment Analysis on the Yelp Reviews Dataset | Kaggle", 
+    "url": "https://www.kaggle.com/code/omkarsabnis/sentiment-analysis-on-the-yelp-reviews-dataset"},
+  "7" : {
+    "title": "Sentiment Analysis on the Yelp Reviews Dataset | Kaggle", 
+    "url": "https://www.kaggle.com/code/omkarsabnis/sentiment-analysis-on-the-yelp-reviews-dataset/notebook"},
+  "8" : {
+    "title": "figshare - credit for all your research", 
+    "url": "https://figshare.com/"},
+  "9" : {
+    "title": "Native Messaging - Chrome Developers", 
+    "url": "https://developer.chrome.com/docs/apps/nativeMessaging/"},
+  "10" : {
+    "title": "Untitled1.ipynb - Colaboratory", 
+    "url": "https://colab.research.google.com/drive/1D99JQRPj_RaoYrpsW9vHARF6BYlCHK_y"},
+  "11" : {
+    "title": "kNN Classifier Tutorial | Kaggle", 
+    "url": "https://www.kaggle.com/code/prashant111/knn-classifier-tutorial#6.-Import-dataset-"},
+  "12" : {
+    "title": "create word embeddings and get nearest neighbors - Google Search", 
+    "url": "https://www.google.com/search?q=create+word+embedd…57j33i10i160l2.18212j0j1&sourceid=chrome&ie=UTF-8"},
+  "13" : {
+    "title": "Embedding Techniques on Text Data using KNN", 
+    "url": "https://www.analyticsvidhya.com/blog/2022/01/embedding-techniques-on-text-data-using-knn/"},
+  "14" : {
+    "title": "Enter Bug: Firefox", 
+    "url": "https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox&format=__default__"},
+  "15" : {
+    "title": "chromeExtension/getAllTabs.js at main · deenuy/chromeExtension", 
+    "url": "https://github.com/deenuy/chromeExtension/blob/main/scripts/getAllTabs.js"}
+}

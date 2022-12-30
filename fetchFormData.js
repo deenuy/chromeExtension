@@ -80,6 +80,6 @@ getCurrentTab().then((tab) => {
 async function getCurrentTab() {
   let queryOptions = { currentWindow: true, active: true };
   let [tab] = await chrome.tabs.query(queryOptions);
-  // console.log([tab]);
+  console.log([tab]);
   return [tab];
 }
