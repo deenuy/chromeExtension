@@ -8,7 +8,7 @@ document.getElementById("getAllTabs").addEventListener("click", () => {
 });
 
 /********************************
-     Supplimentary functions  
+     supplementary functions 
  ********************************/
 
 // Chrome API to get tabs objects and return array {title, url}
