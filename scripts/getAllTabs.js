@@ -3,8 +3,12 @@ document.getElementById("getAllTabs").addEventListener("click", () => {
   const windowData = getBrowserWindowsData();
   console.log(tabData);
   console.log(windowData);
+});
 
-  getWindowsInfo();
+document.getElementById("getAllWindows").addEventListener("click", () => {
+  // const windowAppData = getAppWindowsData();
+  // console.log(windowAppData);
+  getAppWindowsData();
 });
 
 const getTabsData = () => {
@@ -36,7 +40,7 @@ const getBrowserWindowsData = () => {
   return windowsData;
 };
 
-const getWindowsInfo = () => {
+const getAppWindowsData = () => {
   chrome.tabs.query({ active: true }, (tabs) => {
     if (tabs.length) {
       const tab = tabs[0];
@@ -44,26 +48,6 @@ const getWindowsInfo = () => {
         console.log(streamId, tab);
       });
     }
-    return false;
   });
-
-  // getCurrentTab().then((tab).then(() => {
-  //     chrome.desktopCapture.chooseDesktopMedia(
-  //         ["screen", "window", "tab"],
-  //         tab,
-  //         (streamId) => {
-  //           //check whether the user canceled the request or not
-  //           console.log(streamId);
-  //           if (streamId && streamId.length) {
-  //             setTimeout(() => {
-  //               chrome.tabs.sendMessage(
-  //                 tab.id,
-  //                 { name: "stream", streamId },
-  //                 (response) => console.log(response)
-  //               );
-  //             }, 200);
-  //           }
-  //         }
-  //       );
-  // }));
+  return false;
 };
