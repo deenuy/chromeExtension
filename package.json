@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ps-list": "^8.1.1",
+    "ps-node": "^0.1.6"
+  }
+}

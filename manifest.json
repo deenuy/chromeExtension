@@ -11,7 +11,9 @@
     "downloads",
     "tabs",
     "scripting",
-    "storage"
+    "storage",
+    "clipboardWrite",
+    "clipboardRead"
   ],
 
   "action": {

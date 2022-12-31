@@ -12,6 +12,9 @@ function fetchData() {
     let product_label = document.getElementById("product_label")
       ? document.getElementById("product_label")
       : document.getElementById("field_container_product");
+    let component_label = document.getElementById("component_label")
+      ? document.getElementById("content_label")
+      : document.getElementById("field_container_component");
     let version_select = document.getElementById("version_select")
       ? document.getElementById("version_select")
       : document.getElementById("version");
@@ -32,6 +35,7 @@ function fetchData() {
       bug_steps: bug_steps.value,
       description: expected.value,
       product_label: product_label.innerHTML,
+      component_label: component_label.value,
       version_select: version_select.value,
       bug_type: bug_type,
       hardware: hardware,
@@ -43,6 +47,7 @@ function fetchData() {
       bug_steps: "",
       description: "",
       product_label: "",
+      component_label: "",
       version_select: "",
       bug_type: "",
       hardware: "",
@@ -67,6 +72,8 @@ getCurrentTab().then((tab) => {
       document.getElementById("summary").innerHTML = result.short_desc;
       document.getElementById("description").innerHTML = result.bug_steps;
       document.getElementById("product_label").innerHTML = result.product_label;
+      document.getElementById("component_label").innerHTML =
+        result.component_label;
       document.getElementById("version_select").innerHTML =
         result.version_select;
       document.getElementById("bug_type").innerHTML = result.bug_type;

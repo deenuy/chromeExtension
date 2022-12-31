@@ -1,3 +1,26 @@
+document.getElementById("capture_image").addEventListener("click", () => {
+  getCurrentTab().then((tab) => {
+    tab = tab[0];
+    console.log(tab);
+    chrome.desktopCapture.chooseDesktopMedia(
+      ["window", "tab", "screen"],
+      tab,
+      (streamId) => {
+        //check whether the user canceled the request or not
+        if (streamId && streamId.length) {
+          setTimeout(() => {
+            chrome.tabs.sendMessage(
+              tab.id,
+              { name: "stream", streamId },
+              (response) => console.log(response)
+            );
+          }, 200);
+        }
+      }
+    );
+  });
+});
+
 chrome.action.onClicked.addListener(function (tab) {
   chrome.desktopCapture.chooseDesktopMedia(
     ["screen", "window", "tab"],
@@ -76,27 +99,4 @@ chrome.runtime.onMessage.addListener((message, sender, senderResponse) => {
       });
     return true;
   }
-});
-
-document.getElementById("capture_image").addEventListener("click", () => {
-  getCurrentTab().then((tab) => {
-    tab = tab[0];
-    console.log(tab);
-    chrome.desktopCapture.chooseDesktopMedia(
-      ["window", "tab"],
-      tab,
-      (streamId) => {
-        //check whether the user canceled the request or not
-        if (streamId && streamId.length) {
-          setTimeout(() => {
-            chrome.tabs.sendMessage(
-              tab.id,
-              { name: "stream", streamId },
-              (response) => console.log(response)
-            );
-          }, 200);
-        }
-      }
-    );
-  });
 });

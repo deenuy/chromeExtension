@@ -1,0 +1,695 @@
+%
+%
+%
+AMPArtworkAgent
+AMPDeviceDiscoveryAgent
+AMPLibraryAgent
+APFSUserAgent
+ASPCarryLog
+AXVisualSupportAgent
+AccessibilityVisualsAgent
+AccountSubscriber
+AccountSubscriber
+AirPlayUIAgent
+AirPlayXPCHelper
+AppSSOAgent
+AppSSODaemon
+AppleCredentialManagerDaemon
+AppleSpell
+AssetCache
+AssetCacheLocatorService
+AssetCacheLocatorService
+AssetCacheTetheratorService
+AudioComponentRegistrar
+AudioComponentRegistrar
+BTLEServer
+BTLEServerAgent
+BackgroundTaskManagementAgent
+BetterSnapTool
+BiomeAgent
+BlueTool
+BooksThumbnail
+CAReportingService
+CMFSyncAgent
+COMM
+CVMServer
+Calendar
+CalendarFocusConfigurationExtension
+CalendarWidgetExtension
+CallHistoryPluginHelper
+CallHistorySyncHelper
+CarbonComponentScannerXPC
+CategoriesService
+CategoriesService
+CategoriesService
+CategoriesService
+CategoriesService
+CategoriesService
+CategoriesService
+CloudKeychainProxy
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper
+Code Helper (GPU)
+Code Helper (Renderer)
+Code Helper (Renderer)
+Code Helper (Renderer)
+Code Helper (Renderer)
+CommCenter
+ContainerMetadataExtractor
+ContextService
+ContextStoreAgent
+ContinuityCaptureAgent
+ControlCenter
+ControlStrip
+Core Audio Driver (MSTeamsAudioDevice.driver)
+Core Audio Driver (com.parallels.mobile.audio.driver)
+CoreLocationAgent
+CoreServicesUIAgent
+CoreSpotlightService
+CrashReporterSupportHelper
+Discord
+Discord Helper
+Discord Helper
+Discord Helper (GPU)
+Discord Helper (Renderer)
+DiskArbitrationAgent
+DiskUnmountWatcher
+DisplayLinkUserAgent
+Dock
+DockHelper
+Electron
+EmbeddedOSInstallService
+EmojiFunctionRowIM_Extension
+EscrowSecurityAlert
+FindMyMacd
+Finder
+GSSCred
+Google Chrome
+Google Chrome Helper
+Google Chrome Helper
+Google Chrome Helper
+Google Chrome Helper
+Google Chrome Helper (GPU)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+Google Chrome Helper (Renderer)
+GroupSessionService
+HomeWidget
+IDSBlastDoorService
+IMAutomaticHistoryDeletionAgent
+IMDPersistenceAgent
+IOUserBluetoothSerialDriver
+InteractiveLegacyProfilesSubscriber
+InteractiveLegacyProfilesSubscriber
+KernelEventAgent
+Keychain Circle Notification
+LegacyProfilesSubscriber
+LegacyProfilesSubscriber
+LinkedNotesUIService
+LocationMenu
+MTLAssetUpgraderD
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MTLCompilerService
+MailShortcutsExtension
+ManagementTestSubscriber
+ManagementTestSubscriber
+MessagesActionExtension
+MessagesBlastDoorService
+MessagesBlastDoorService
+Microsoft Excel
+MicrosoftSqlToolsServiceLayer
+Miro
+Miro Helper
+Miro Helper
+Miro Helper (GPU)
+Miro Helper (Renderer)
+Miro Helper (Renderer)
+MirrorDisplays
+MobileSMSSpotlightImporterCatalyst
+NewsToday2
+Notes
+NotificationCenter
+Notion
+Notion Helper
+Notion Helper
+Notion Helper (GPU)
+Notion Helper (Renderer)
+Notion Helper (Renderer)
+Notion Helper (Renderer)
+PAH_Extension
+PDF Expert
+PasscodeSettingsSubscriber
+PasscodeSettingsSubscriber
+PasswordBreachAgent
+PerfPowerServices
+PlugInLibraryService
+PlugInLibraryService
+PlugInLibraryService
+PlugInLibraryService
+PlugInLibraryService
+PlugInLibraryService
+PlugInLibraryService
+PodcastContentService
+PowerChime
+PowerUIAgent
+PrintUITool
+ProtectedCloudKeySyncing
+Python
+QuickLookSatellite
+QuickLookUIService
+QuickLookUIService
+QuickLookUIService
+QuickLookUIService
+QuickLookUIService
+RemoteManagementAgent
+ReportCrash
+ReportCrash
+SafariBookmarksSyncAgent
+SafariLaunchAgent
+SafariLinkExtension
+SafeEjectGPUAgent
+SafeEjectGPUService
+ScopedBookmarkAgent
+ScreenTimeAgent
+ShipIt
+SidecarRelay
+Siri
+SiriNCService
+SoftwareUpdateNotificationManager
+Spotlight
+SqlToolsResourceProviderService
+StatusKitAgent
+StocksWidget
+SubmitDiagInfo
+SystemUIServer
+TextEdit
+TextInputMenuAgent
+TextInputSwitcher
+ThingsMacSandboxHelper
+ThingsWidgetExtensionMacAppStore
+ThumbnailExtension_macOS
+TouchBarServer
+TrustedPeersHelper
+UARPUpdaterServiceUSBPD
+UIKitSystem
+USBAgent
+UVCAssistant
+UniversalControl
+UsageTrackingAgent
+UserEventAgent
+UserEventAgent
+VDCAssistant
+VTDecoderXPCService
+VTDecoderXPCService
+VTDecoderXPCService
+VTDecoderXPCService
+VTDecoderXPCService
+VTDecoderXPCService
+VTDecoderXPCService
+VTDecoderXPCService
+VTDecoderXPCService
+VTEncoderXPCService
+VTEncoderXPCService
+VTEncoderXPCService
+VTEncoderXPCService
+ViewBridgeAuxiliary
+WiFiAgent
+WiFiCloudAssetsXPCService
+WiFiVelocityAgent
+WindowManager
+WindowServer
+WirelessRadioManagerd
+WorldClockWidget
+XProtect
+XProtect
+XProtectBehaviorService
+XProtectPluginService
+XProtectPluginService
+XprotectService
+accessoryupdaterd
+accountsd
+adid
+adprivacyd
+airportd
+akd
+akd
+amfid
+amsaccountsd
+amsengagementd
+analyticsd
+aned
+apfsd
+appleaccountd
+appleeventsd
+appstoreagent
+apsd
+askpermissiond
+aslmanager
+assistant_service
+assistantd
+audioclocksyncd
+auditd
+authd
+autofsd
+automountd
+avatarsd
+avconferenced
+awdd
+axassetsd
+backgroundassets.user
+backgroundtaskmanagementd
+backupd
+backupd-helper
+biomed
+biomesyncd
+biometrickitd
+bird
+bluetoothd
+bluetoothuserd
+bookassetd
+bookdatastored
+bootinstalld
+calaccessd
+callservicesd
+captiveagent
+cdpd
+cfprefsd
+cfprefsd
+cfprefsd
+cfprefsd
+chrome_crashpad_handler
+chrome_crashpad_handler
+chrome_crashpad_handler
+chrome_crashpad_handler
+chrome_crashpad_handler
+cloudd
+cloudd
+cloudpaird
+cloudphotod
+colorsync.displayservices
+colorsync.useragent
+colorsyncd
+com.apple.AccountPolicyHelper
+com.apple.AmbientDisplayAgent
+com.apple.AppStoreDaemon.StorePrivilegedTaskService
+com.apple.AppleUserHIDDrivers
+com.apple.BKAgentService
+com.apple.CodeSigningHelper
+com.apple.ColorSyncXPCAgent
+com.apple.ColorSyncXPCAgent
+com.apple.ColorSyncXPCAgent
+com.apple.ColorSyncXPCAgent
+com.apple.DictionaryServiceHelper
+com.apple.DriverKit-IOUserDockChannelSerial
+com.apple.FaceTime.FTConversationService
+com.apple.MobileSoftwareUpdate.CleanupPreparePathService
+com.apple.Notes.SpotlightIndexExtension
+com.apple.Safari.History
+com.apple.Safari.SafeBrowsing.Service
+com.apple.StreamingUnzipService
+com.apple.accessibility.mediaaccessibilityd
+com.apple.appkit.xpc.openAndSavePanelService
+com.apple.appkit.xpc.openAndSavePanelService
+com.apple.appkit.xpc.openAndSavePanelService
+com.apple.appkit.xpc.openAndSavePanelService
+com.apple.audio.ComponentTagHelper
+com.apple.audio.DriverHelper
+com.apple.audio.SandboxHelper
+com.apple.audio.SandboxHelper
+com.apple.audio.SandboxHelper
+com.apple.audio.SandboxHelper
+com.apple.audio.SandboxHelper
+com.apple.audio.SandboxHelper
+com.apple.audio.SandboxHelper
+com.apple.audio.SandboxHelper
+com.apple.cmio.registerassistantservice
+com.apple.dock.extra
+com.apple.geod
+com.apple.geod
+com.apple.geod
+com.apple.hiservices-xpcservice
+com.apple.ifdreader
+com.apple.photos.ImageConversionService
+com.apple.quicklook.ThumbnailsAgent
+com.apple.sbd
+com.apple.siri-distributed-evaluation
+com.apple.siri.embeddedspeech
+com.apple.siri.embeddedspeech
+com.apple.siri.embeddedspeech
+com.apple.speech.speechsynthesisd
+com.apple.tonelibraryd
+com.macpaw.CleanMyMac4.Agent
+com.macpaw.CleanMyMac4.HealthMonitor
+com.macpaw.CleanMyMac4.Menu
+commerce
+configd
+contactsd
+contactsdonationagent
+containermanagerd
+containermanagerd
+containermanagerd
+containermanagerd
+containermanagerd
+containermanagerd
+contentlinkingd
+contextstored
+coreaudiod
+coreautha
+coreauthd
+coreauthd
+corebrightnessd
+coreduetd
+coreservicesd
+corespeechd
+corespotlightd
+coresymbolicationd
+cryptexd
+csnameddatad
+csnameddatad
+ctkahp
+ctkahp
+ctkd
+ctkd
+dasd
+dataaccessd
+deleted
+deleted_helper
+devicecheckd
+diagnosticextensionsd
+diagnostics_agent
+dirhelper
+diskarbitrationd
+diskmanagementd
+displaypolicyd
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+distnoted
+dmd
+donotdisturbd
+dprivacyd
+endpointsecurityd
+eoshostd
+extensionkitservice
+extensionkitservice
+fairplayd
+familycircled
+filecoordinationd
+fileproviderd
+financed
+findmydevice-user-agent
+findmydeviced
+fmfd
+followupd
+fontd
+fontworker
+fseventsd
+gamecontrolleragentd
+gamecontrollerd
+geodMachServiceBridge
+griddatad
+heard
+hidd
+homed
+iCloudNotificationAgent
+iTerm2
+iTermServer-3.4.18
+icdd
+iconservicesagent
+iconservicesagent
+iconservicesd
+identityservicesd
+imagent
+imklaunchagent
+installcoordinationd
+installd
+intelligenceplatformd
+ioupsd
+itunescloudd
+kernelmanagerd
+keybagd
+keyboardservicesd
+knowledge-agent
+knowledgeconstructiond
+launchd
+launchservicesd
+linkd
+localizationswitcherd
+locationd
+lockoutagent
+logd
+logd_helper
+login
+login
+logind
+loginitemregisterd
+loginwindow
+lsd
+lsd
+mDNSResponder
+mDNSResponderHelper
+maild
+mapspushd
+mdbulkimport
+mdbulkimport
+mds
+mds_stores
+mdworker
+mdworker
+mdworker_shared
+mdworker_shared
+mdwrite
+media-indexer
+mediaanalysisd
+mediaremoteagent
+mediaremoted
+memoryanalyticsd
+metrickitd
+microstackshot
+misagent
+mlruntimed
+mobileactivationd
+mobileassetd
+mobiletimerd
+naturallanguaged
+nbagent
+nbstated
+ndoagent
+neagent
+nearbyd
+nehelper
+nesessionmanager
+netbiosd
+networkserviceproxy
+newsd
+nfcd
+node
+notifyd
+nsattributedstringagent
+nsurlsessiond
+nsurlsessiond
+online-authd
+opendirectoryd
+osanalyticshelper
+parsecd
+passd
+pboard
+pbs
+peopled
+periodic-wrapper
+photoanalysisd
+photolibraryd
+pidinfo
+pkd
+powerd
+printtool
+proactived
+proactiveeventtrackerd
+promotedcontentd
+ps
+python
+python
+python
+python
+python
+python
+rapportd
+rapportd
+recentsd
+remindd
+remoted
+remotemanagementd
+replayd
+reversetemplated
+revisiond
+routined
+rtcreportingd
+runningboardd
+sandboxd
+searchpartyd
+searchpartyuseragent
+secd
+secinitd
+secinitd
+secinitd
+secinitd
+securityd
+securityd_service
+seld
+sh
+sharedfilelistd
+sharingd
+siriactionsd
+siriinferenced
+siriknowledged
+sirittsd
+smd
+sociallayerd
+softwareupdated
+softwareupdated
+sort
+spindump
+spindump_agent
+spotlightknowledged
+storeaccountd
+storedownloadd
+storekitagent
+suggestd
+suhelperd
+swcd
+symptomsd
+symptomsd-diag
+syncdefaultsd
+sysdiagnose
+sysextd
+syslogd
+sysmond
+syspolicyd
+system_installd
+systemsoundserverd
+systemstats
+systemstats
+systemstatusd
+talagent
+taskgated
+tccd
+tccd
+thermald
+thermalmonitord
+timed
+tipsd
+transparencyd
+triald
+trustd
+trustd
+trustd
+trustd
+trustd
+trustdFileHelper
+tzd
+uninstalld
+usbd
+usbmuxd
+useractivityd
+userfs_helper
+userfsd
+usermanagerd
+usernoted
+watchdogd
+watchlistd
+weatherd
+wifianalyticsd
+wifip2pd
+wifivelocityd
+xargs
+xartstorageremoted
+zsh
+zsh
+zsh

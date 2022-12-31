@@ -1,0 +1,10 @@
+{
+  "summary" : "getting popups that are written in java script and are bypassing the blocker disabled java script",
+  "type" : "defect",
+  "description" : "Steps to Reproduce:\n1.leave java script on and go to the url listed in details\n 2. turn java script off and visit the url listed above\n3. Actual Results: \njust as I said above the popups are java script based leave it on popups \n turn it off no popups\n Expected Results:\nblocked the popup regardless of the java script setting",
+  "platform" : "X86",
+  "os" : "Windows 10",
+  "product" : "Firefox",
+  "component" : "Security",
+  "version" : "Firefox 104"
+}
