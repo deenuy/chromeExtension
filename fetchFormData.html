@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>ExinesLab Bugzilla RecSys</title>
+    <!-- Custom CSS -->
+  </head>
+
   <body>
-    <h2 style="display: flex; justify-content: center">BugZilla</h2>
-    <div style="width: 300px">
-      <div style="display: flex">
-        <ul>
-          <li><b>Summary</b> : <span id="summary"></span></li>
-          <li><b>Product</b> : <span id="product_label"></span></li>
-          <li><b>Description</b> : <span id="description"></span></li>
-          <li><b>Version</b> : <span id="version_select"></span></li>
-          <li><b>Bug Type</b> : <span id="bug_type"></span></li>
-          <li><b>Attachment</b> : <span id="attachment"></span></li>
-          <li><b>Hardware</b> : <span id="hardware"></span></li>
-          <li><b>OS</b> : <span id="os"></span></li>
-        </ul>
-        <br>
+    <div class="modal-popup">
+      <div class="modal-header">
+        <img class="modal-logo" src="/assets/icon-16.png" alt="logo">
+        <h5 class="modal-title">ExinesLab RecSys for Bugzilla</h5>
+        <button type="button" class="close" aria-label="Close Get Email Notifications modal"
+          data-dismiss="modal">×</button>
       </div>
-      <button id="capture_image">Capture Image</button>
-      <!-- <button id="test">Fetch</button> -->
+      <div class="modal-body">
+        <img class="modal-body-wait-logo" height="30px" width="30px" src="./assets/Spin-1s-250px.gif" />
+        <p class="modal-body-msg">Please wait.. system is processing data</p>
+      </div>
     </div>
-    <script src="fetchFormData.js"></script>
-    <script src="capture_imgs.js"></script>
+    <script src="/scripts/fetchFormData.js"></script>
   </body>
+
 </html>

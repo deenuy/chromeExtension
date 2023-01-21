@@ -1,0 +1,18 @@
+{
+  "msg01" : {
+    "classes" : ["Code", "Run Time Error", "Dialog Box"],
+    "message" : "Recommender message template 01"
+  },
+  "msg02" : {
+    "classes" : ["Menus and Preferences", "Program Input", "Desired Output"],
+    "message" : "Recommender message template  02"
+  },
+  "msg03" : {
+    "classes" : ["Program Output", "Steps and Processes", "CPU/GPU Performance"],
+    "message" : "Recommender message template  03"
+  },
+  "msg04" : {
+    "classes" : ["Algorithm/Concept Description"],
+    "message" : "Recommender message template  04"
+  }
+}

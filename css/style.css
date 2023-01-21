@@ -1,0 +1,49 @@
+.modal-popup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  overflow: hidden;
+  min-height: 8rem;
+  width: 25rem;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 0.8rem;
+}
+.modal-header {
+  position: relative;
+  height: 3rem;
+}
+.modal-logo {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0;
+}
+.modal-title {
+  color: #001996;
+  font-size: medium;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 5.5rem;
+}
+
+.modal-header .close {
+  opacity: 1;
+  padding: 1rem 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.modal-body-msg {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+}

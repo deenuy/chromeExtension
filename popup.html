@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Customer styling for popup modal -->
+    <link rel="stylesheet" href="/css/popup.css">
+    <!-- Font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">ExinesLab RecSys Notification</h4>
+          <button type="button" class="close" aria-label="Close Get Email Notifications modal"
+            data-dismiss="modal">×</button>
+        </div>
+        <div class="modal-body">
+          <!-- Recommender class labels -->
+          <h5 class="recommender-label">["Code: 84%", "Run Time Error: 72%", "Dialog Box: 55%"]</h5>
+          <!-- Recommender body message -->
+          <p class="recommender-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab facilis ipsum, et explicabo commodi error
+            dolore ratione velit atque natus saepe voluptatem, perferendis repellendus numquam consequatur libero
+            quaerat unde sit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda iusto voluptatum
+            eligendi, fugit explicabo est quo veniam blanditiis in dicta alias commodi et quis nostrum, sed harum cum
+            excepturi corporis?
+          </p>
+          <!-- Terms to use for improving accuracy of prediction -->
+          <div class="terms-of-use-container border-top">
+            <a href="#" id="terms-link" data-toggle="collapse">Terms of Use
+              <i class="fa fa-chevron-down rotate" aria-hidden="true"></i>
+            </a>
+            <div class="collapse" id="termsOfUseContent">
+              <p>Before reporting a bug, make sure you've read our bug writing guidelines:</p>
+              <p>(1) Enter a clear unique summary with detailed description to reproduce the issue</p>
+              <p>(2) Select all the fields appropriately to report a bug </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="subscription-submit" class="btn btn-primary">Close</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
