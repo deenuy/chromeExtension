@@ -2,9 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
-  overflow: hidden;
   min-height: 8rem;
   width: 25rem;
   pointer-events: auto;
@@ -12,16 +9,20 @@
   background-clip: padding-box;
   border: 1px solid rgba(17, 17, 17, 0.2);
   border-radius: 0.8rem;
+  outline: 0;
 }
+
 .modal-header {
   position: relative;
   height: 3rem;
 }
+
 .modal-logo {
   width: 1.2rem;
   height: 1.2rem;
   margin: 0;
 }
+
 .modal-title {
   color: #001996;
   font-size: medium;

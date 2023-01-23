@@ -125,6 +125,17 @@ getCurrentTab().then(async (tab) => {
             // console.log("Popup script is injected");
           }
         );
+
+        //injecting css
+        chrome.scripting.insertCSS(
+          {
+            target: { tabId: id },
+            files: ["./css/popup.css"],
+          },
+          () => {
+            console.log("Popup css is injected");
+          }
+        );
         chrome.scripting.executeScript(
           {
             target: { tabId: id },
@@ -154,12 +165,6 @@ async function customPrompt(message, sampleHTML) {
 
   var alertDiv = document.createElement("div");
 
-  alertDiv.setAttribute(
-    "style",
-    "position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); color:black; background-color: #fff;" +
-      "padding: 20px; border: 1px solid #000; z-index: 9999; text-align: center; font-size: 20px; border-radius: 5px;"
-  );
-
   alertDiv.innerHTML = sampleHTML;
   alertDiv.setAttribute("class", "alert-div");
   alertDiv.setAttribute("id", "alert-div");
@@ -167,7 +172,6 @@ async function customPrompt(message, sampleHTML) {
   // alertDiv.getElementById("recommender_message").innerHTML = message;
 
   document.body.appendChild(alertDiv);
-
   document.getElementById("recommender_message").innerHTML = message;
 }
 
