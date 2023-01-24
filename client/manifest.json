@@ -1,6 +1,6 @@
 {
-  "name": "ExineLab Bugzilla RecSys",
-  "version": "0.0.3",
+  "name": "ImageR for Bug reports",
+  "version": "0.0.4",
   "description": "A Google Chrome extension that recommends (predicts) the image type to attach with bug report created in Firefox Bugzilla incident report system.",
   "manifest_version": 3,
   
@@ -18,7 +18,7 @@
   ],
   
   "action": {
-    "default_title": "ExineLab Bugzilla RecSys",
+    "default_title": "ImageR for Bug reports",
     "default_popup": "fetchFormData.html"
   },
   "host_permissions": ["<all_urls>"],

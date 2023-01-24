@@ -18,7 +18,7 @@
 /* updated margin to bring modal dialog box to center  (~ Deenu) */
 .modal-dialog {
   max-width: 500px;
-  margin: 6rem auto;
+  margin: 7rem auto;
 }
 
 .modal-header {
