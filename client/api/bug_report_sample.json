@@ -1,0 +1,10 @@
+{
+  "summary" : "strange password auto-fill behavior when entering a differently-cased version of the saved username",
+  "type" : "defect",
+  "description" : "If you try to log in to a site that uses case sensitive usernames and accidentally has Firefox remember a username with wrong case there is no way to log in anymore without deleting the saved username/pass",
+  "platform" : "Desktop",
+  "os" : "All",
+  "product" : "Toolkit",
+  "component" : "Password Manager",
+  "version" : "Firefox 110"
+}

@@ -1,0 +1,11 @@
+version: "3.2"
+
+services:
+  flask-app:
+    build: ./Flask_App
+    volumes:
+      - ./Flask_App/static:/Flask_App/static
+      - ./Flask_App/db:/Flask_App/db
+    ports:
+      - "5001:5001"
+    # restart: unless-stopped

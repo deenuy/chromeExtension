@@ -1,0 +1,3 @@
+PORT = 5001
+DEBUG = False
+HOST = '0.0.0.0'

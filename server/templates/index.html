@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
-<head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/index.css" />
+    <title>ImageR Flask App</title>
+  </head>
 
-<body>
- <div class="login">
-	<h1>Flower Class Prediction</h1>
-
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Sepal_Length" placeholder="Sepal_Length" required="required" />
-        <input type="text" name="Sepal_Width" placeholder="Sepal_Width" required="required" />
-		<input type="text" name="Petal_Length" placeholder="Petal_Length" required="required" />
-		<input type="text" name="Petal_Width" placeholder="Petal_Width" required="required" />
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-
-   <br>
-   <br>
-   {{ prediction_text }}
-
- </div>
-
-
-</body>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <img class="navbar-logo" src="/static/icon-32.png" alt="logo" />
+        <h4 class="navbar-title">ImageR</h4>
+      </div>
+      <div class="container">
+        <h1 class="container-title">Welcome to ImageR for Bug reports!</h1>
+        <p class="container-msg">
+          Python Flask app is running successfully on http://0.0.0.0:5000. Ready
+          to get started?
+        </p>
+        <header class="soft-small">
+          <h3 class="api-header">API:</h3>
+          <h3 class="api-name">imager-predict</h3>
+          <code class="api-descriptor"
+            ><span title="HTTP Method" class="http-method-pill http-method-post"
+              >POST</span
+            >
+            <span class="api-full-uri">
+              <span title="API Environment" class="api-environment"
+                >http://localhost:5000/imager-predict</span
+              >
+            </span>
+          </code>
+          <h3 class="api-name">request example:</h3>
+          <pre class="language-json">
+            <code class="language-json">
+              {
+                "summary" : "strange password auto-fill behavior when entering a differently-cased version of the saved username",
+                "type" : "defect",
+                "description" : "If you try to log in to a site that uses case sensitive usernames and accidentally has Firefox remember
+                a username with wrong case there is no way to log in anymore without deleting the saved username/pass.\nReproducible:",
+                "platform" : "Desktop",
+                "os" : "All",
+                "product" : "Toolkit",
+                "component" : "Password Manager",
+                "version" : "Firefox 110"
+              }
+            </code>
+          </pre>
+        </header>
+      </div>
+    </div>
+  </body>
 </html>
