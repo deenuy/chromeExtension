@@ -1,36 +1,3 @@
-// Temporary accomodation for Backend API response results
-const rq2 = {
-  Code: 0.98,
-  "Run Time Error": 0.71,
-  "Menus and Preferences": 0.22,
-  "Program Input": 0.21,
-  "Desired Output": 0.11,
-  "Program Output": 0.18,
-  "Dialog Box": 0.52,
-  "Steps and Processes": 0.25,
-  "CPU/GPU Performance": 0.18,
-  "Algorithm/Concept Description": 0.13,
-};
-
-// Template for recommender system messages
-const messages = {
-  msg01: {
-    classes: ["Code", "Run Time Error", "Dialog Box"],
-    message: "Recommender message template 01",
-  },
-  msg02: {
-    classes: ["Menus and Preferences", "Program Input", "Desired Output"],
-    message: "Recommender message template 02",
-  },
-  msg03: {
-    classes: ["Program Output", "Steps and Processes", "CPU/GPU Performance"],
-    message: "Recommender message template 03",
-  },
-  msg04: {
-    classes: ["Algorithm/Concept Description"],
-    message: "Recommender message template 04",
-  },
-};
 
 // Fetch Bugzilla Form Data
 function fetchData() {
@@ -84,15 +51,12 @@ function fetchData() {
       os: "",
     };
   }
-  // console.log(short_desc, short_desc.value);
   return data;
 }
 
 async function getCurrentTab() {
   let queryOptions = { currentWindow: true, active: true };
-  console.log(queryOptions);
   let [tab] = await chrome.tabs.query(queryOptions);
-  console.log([tab][0].url);
   return [tab];
 }
 
@@ -100,19 +64,21 @@ async function getCurrentTab() {
 getCurrentTab().then(async (tab) => {
   const id = tab[0].id;
   const sampleHTML = await fetchHTML();
-  // console.log("sampleHTML", sampleHTML);
 
   chrome.scripting.executeScript(
     {
       target: { tabId: tab[0].id },
       function: fetchData,
     },
-    (results) => {
-      console.log("Popup script:", results[0].result);
+    async (results) => {
+
+      if (chrome.runtime.lastError) {
+        alert('Sometging went wrong!');
+        return;
+     }
 
       let result = results[0].result;
-      const message = main();
-      // console.log(result);
+      const message = await main(result);
 
       setTimeout(() => {
         chrome.scripting.executeScript(
@@ -122,7 +88,10 @@ getCurrentTab().then(async (tab) => {
             files: ["./scripts/popup.js"],
           },
           () => {
-            // console.log("Popup script is injected");
+            if (chrome.runtime.lastError) {
+              alert('Sometging went wrong!');
+              return;
+            }
           }
         );
 
@@ -144,22 +113,31 @@ getCurrentTab().then(async (tab) => {
             args: [message, sampleHTML],
           },
           () => {
+            if (chrome.runtime.lastError) {
+              alert('Sometging went wrong!');
+              return;
+            }
             //Update message as task is completed
             document.getElementById("root").innerHTML =
               "Task is Completed Successfully";
           }
         );
-      }, 5 * 1000);
+
+        //closing the extension popup
+        window.close();
+
+      }, 3 * 1000);
+
     }
   );
 });
 
 const text = document.getElementsByClassName("text")[0];
-// console.log(text);
 
 // RQ2 mapping with recommended message to prompt recommendation result
 async function customPrompt(message, sampleHTML) {
-  let body = document.createElement("div");
+  try{
+    let body = document.createElement("div");
 
   document.body.appendChild(body);
 
@@ -168,35 +146,69 @@ async function customPrompt(message, sampleHTML) {
   alertDiv.innerHTML = sampleHTML;
   alertDiv.setAttribute("class", "alert-div");
   alertDiv.setAttribute("id", "alert-div");
-
-  // alertDiv.getElementById("recommender_message").innerHTML = message;
-
   document.body.appendChild(alertDiv);
-  document.getElementById("recommender_message").innerHTML = message;
+  let results = document.getElementById("results");
+
+  let j = 1;
+  for(i in message){
+    const result_p = document.createElement("p");
+    result_p.setAttribute("class", "recommender-body");
+    result_p.innerHTML = j++ + ". " + i + " (" + message[i] + "% relevance)";
+    results.appendChild(result_p);
+  }
+
+  }
+  catch(e){
+    console.log(e);
+  }
 }
 
 // Logic to iterate throguh recommender messages mapping with RQ2 result for comparision of label and corresponding message
-const main = () => {
-  let keys_arr = [];
-  for (key in rq2) {
-    if (rq2[key] > 0.5) {
-      keys_arr.push(key);
+const main = async (data) => {
+  let keys_arr = {};
+
+  //
+  try{
+    let rq2 = {};
+    try{
+      rq2 = await fetch('http://127.0.0.1:5000/imager_predict', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body : JSON.stringify(data),
+      });
+      rq2 = await rq2.json();
     }
+    catch(e){
+      console.log(e);
+    }
+
+
+    for (key in rq2) {
+      if (rq2[key] > 0.5) {
+        keys_arr[key] = rq2[key];
+      }
+    }
+
+    // console.log(keys_arr);
+    return keys_arr;
+  }
+  catch(e){
+    console.log(e);
   }
 
-  for (key in messages) {
-    if (JSON.stringify(messages[key].classes) === JSON.stringify(keys_arr)) {
-      // console.log(messages[key].message)
-      return messages[key].message;
-    }
-  }
-  return false;
 };
 
 // Fetch popup html
 const fetchHTML = async () => {
-  let response = await fetch("popup.html");
+  try{
+    let response = await fetch("popup.html");
   let data = await response.text();
   // console.log(typeof(data));
   return data;
+  }
+  catch(e){
+    return false;
+  }
 };
