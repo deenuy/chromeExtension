@@ -1,1 +1,4 @@
 flask
+nltk
+flask_swagger_ui
+scikit-multilearn
