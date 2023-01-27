@@ -1,3 +1,2 @@
-server/ml-model
 server/__pycache__
 .pytest_cache
