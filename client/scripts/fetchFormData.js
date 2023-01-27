@@ -1,4 +1,3 @@
-
 // Fetch Bugzilla Form Data
 function fetchData() {
   let data = {};
@@ -30,7 +29,7 @@ function fetchData() {
       : null;
 
     data = {
-      short_desc: short_desc.value,
+      summary: short_desc.value,
       bug_steps: bug_steps.value,
       description: expected.value,
       product_label: product_label.innerHTML,
@@ -41,7 +40,7 @@ function fetchData() {
     };
   } catch (e) {
     data = {
-      short_desc: "",
+      summary: "",
       bug_steps: "",
       description: "",
       product_label: "",
@@ -71,11 +70,10 @@ getCurrentTab().then(async (tab) => {
       function: fetchData,
     },
     async (results) => {
-
       if (chrome.runtime.lastError) {
-        alert('Sometging went wrong!');
+        alert("Sometging went wrong!");
         return;
-     }
+      }
 
       let result = results[0].result;
       const message = await main(result);
@@ -89,7 +87,7 @@ getCurrentTab().then(async (tab) => {
           },
           () => {
             if (chrome.runtime.lastError) {
-              alert('Sometging went wrong!');
+              alert("Sometging went wrong!");
               return;
             }
           }
@@ -114,7 +112,7 @@ getCurrentTab().then(async (tab) => {
           },
           () => {
             if (chrome.runtime.lastError) {
-              alert('Sometging went wrong!');
+              alert("Sometging went wrong!");
               return;
             }
             //Update message as task is completed
@@ -125,9 +123,7 @@ getCurrentTab().then(async (tab) => {
 
         //closing the extension popup
         window.close();
-
       }, 3 * 1000);
-
     }
   );
 });
@@ -136,29 +132,58 @@ const text = document.getElementsByClassName("text")[0];
 
 // RQ2 mapping with recommended message to prompt recommendation result
 async function customPrompt(message, sampleHTML) {
-  try{
+  try {
+    // console.log(message);
     let body = document.createElement("div");
 
-  document.body.appendChild(body);
+    document.body.appendChild(body);
 
-  var alertDiv = document.createElement("div");
+    var alertDiv = document.createElement("div");
 
-  alertDiv.innerHTML = sampleHTML;
-  alertDiv.setAttribute("class", "alert-div");
-  alertDiv.setAttribute("id", "alert-div");
-  document.body.appendChild(alertDiv);
-  let results = document.getElementById("results");
+    alertDiv.innerHTML = sampleHTML;
+    alertDiv.setAttribute("class", "alert-div");
+    alertDiv.setAttribute("id", "alert-div");
+    document.body.appendChild(alertDiv);
+    let results = document.getElementById("results");
 
-  let j = 1;
-  for(i in message){
-    const result_p = document.createElement("p");
-    result_p.setAttribute("class", "recommender-body");
-    result_p.innerHTML = j++ + ". " + i + " (" + message[i] + "% relevance)";
-    results.appendChild(result_p);
-  }
+    //for error message
+    if (message["error"]) {
+      const result_p = document.createElement("p");
+      result_p.setAttribute("class", "recommender-body-error");
+      result_p.innerHTML = "ERROR : " + message["message"];
+      document.getElementById("no_image_needed").appendChild(result_p);
 
-  }
-  catch(e){
+      //remove the success div
+      document.getElementById("success").remove();
+      return;
+    }
+
+    //no image needed condition
+    if (message.hasOwnProperty("message")) {
+      if (message["message"].toLowerCase() === "no image needed") {
+        const result_p = document.createElement("p");
+        let no_image_needed = document.getElementById("no_image_needed");
+        result_p.setAttribute("class", "recommender-body");
+        result_p.innerHTML = "No Image Needed";
+        no_image_needed.appendChild(result_p);
+
+        //remove the success div
+        document.getElementById("success").remove();
+        return;
+      }
+    }
+
+    let j = 1;
+    for (i in message) {
+      const result_p = document.createElement("p");
+      result_p.setAttribute("class", "recommender-body");
+      result_p.innerHTML = j++ + ". " + i + " (" + message[i] + "% relevant)";
+      results.appendChild(result_p);
+    }
+
+    //removing no image needed div
+    document.getElementById("no_image_needed").remove();
+  } catch (e) {
     console.log(e);
   }
 }
@@ -168,22 +193,24 @@ const main = async (data) => {
   let keys_arr = {};
 
   //
-  try{
+  try {
     let rq2 = {};
-    try{
-      rq2 = await fetch('http://127.0.0.1:5000/imager_predict', {
-        method: 'POST',
+    try {
+      rq2 = await fetch("http://127.0.0.1:5000/imager_predict", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body : JSON.stringify(data),
+        body: JSON.stringify(data),
       });
       rq2 = await rq2.json();
+    } catch (e) {
+      return {
+        error: true,
+        // message: e.message,
+        message: "Backend server API is down. Contact your administrator.",
+      };
     }
-    catch(e){
-      console.log(e);
-    }
-
 
     for (key in rq2) {
       if (rq2[key] > 0.5) {
@@ -191,24 +218,27 @@ const main = async (data) => {
       }
     }
 
-    // console.log(keys_arr);
+    //checking no image needed condition
+    if (rq2.hasOwnProperty("message")) {
+      if (rq2["message"].toLowerCase() === "no image needed") {
+        return rq2;
+      }
+    }
+
     return keys_arr;
-  }
-  catch(e){
+  } catch (e) {
     console.log(e);
   }
-
 };
 
 // Fetch popup html
 const fetchHTML = async () => {
-  try{
+  try {
     let response = await fetch("popup.html");
-  let data = await response.text();
-  // console.log(typeof(data));
-  return data;
-  }
-  catch(e){
+    let data = await response.text();
+    // console.log(typeof(data));
+    return data;
+  } catch (e) {
     return false;
   }
 };
